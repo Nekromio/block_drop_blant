@@ -12,7 +12,7 @@ public Plugin myinfo =
 	name = "[Any] Block Drop Plant",
 	author = "Nek.'a 2x2 | ggwp.site ",
 	description = "Блокировка выборса плента",
-	version = "1.0.0 100",
+	version = "1.0.0 101",
 	url = "https://ggwp.site/"
 };
 
@@ -68,7 +68,7 @@ stock bool IsValidClient(int client)
 
 public Action Event_DropPlant(int client, const char[] command, any args)
 {
-	if(!cvEnable.BoolValue || !IsValidClient(client) || !IsPlayerAlive(client) && IsFakeClient(client) || b_dropbomp(client) <= -1)
+	if(!cvEnable.BoolValue || !IsValidClient(client) || !IsPlayerAlive(client) || IsFakeClient(client) || b_dropbomp(client) <= -1)
         return Plugin_Continue;
 
     TransferPlant(client);
